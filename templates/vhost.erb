@@ -17,9 +17,8 @@ NameVirtualHost <%= @vhost_name %>:<%= @port %>
   </FilesMatch>
   <Directory <%= @docroot %>>
     Options <%= @options %>
-    AllowOverride None
-    Order allow,deny
-    allow from all
+    AllowOverride all
+    Require all granted
   </Directory>
 
 <%= @vhost_extra %>
