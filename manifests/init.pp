@@ -34,8 +34,8 @@ class meetbot {
     ensure => present,
   }
 
+  # We use limnoria instead of supybot
   $packages = [
-    'supybot',
     'bzr',
     'python-launchpadlib',
     'python-soappy',
