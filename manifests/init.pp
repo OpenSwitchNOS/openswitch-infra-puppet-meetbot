@@ -61,7 +61,6 @@ class meetbot {
     ensure  => directory,
     recurse => true,
     require => [
-      Package['supybot'],
       Vcsrepo['/opt/meetbot']
     ],
     source  => '/opt/meetbot/MeetBot',
@@ -71,7 +70,6 @@ class meetbot {
     ensure  => directory,
     recurse => true,
     require => [
-      Package['supybot'],
       Vcsrepo['/opt/ubuntu_supybot_plugins']
     ],
     source  => '/opt/ubuntu_supybot_plugins/Bugtracker',
